@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+      <context:annotation-config></context:annotation-config> 
+      <context:component-scan base-package="com.package1"></context:component-scan>
+      <!-- This is must if you are using annotations -->
+      
+       <bean id = "emp" class = "com.package1.Employee">
+       
+       <property name="ename"  value = "jaxx"/>
+<property name="eid"  value = "100"/>
+<property name="epay"  value = "100000"/>
+<!-- <property name="address"      ref = "as"/>
+ -->      </bean>
+      
+ <bean  id = "address" class = "com.package1.Address">
+<property name="houseNO"  value = "969"/>  
+<property name="street"  value = "Durga bhavani"/>
+<property name="street2"  value = "sontoshnagar"/>
+ </bean>
+
+<!-- <bean id = "engine" class = "com.package1.Engine" >
+
+<property name ="eno"   value = "1234"/>
+<property name ="name"   value = "teja"/>
+<property name ="mfg"   value = "2020"/>
+</bean>
+ -->
+<bean  id = "as" class = "com.package1.Address">
+<property name="houseNO"  value = "979"/>  
+<property name="street"  value = " new Durga bhavani"/>
+<property name="street2"  value = " new sontoshnagar"/>
+ </bean>
+ 
+  
+</beans>
